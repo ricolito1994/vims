@@ -1,0 +1,27 @@
+.marker {
+  color: white;
+  /* background-color: rgba(0,0,0,0.3);
+  border: solid 1px rgba(0,0,0,0.3); */
+  font-weight: 400;
+/*   padding: 4px;
+  top: -8px; */
+}
+
+.marker::after {
+/*   content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: solid 8px transparent;
+  border-top-color: rgba(0,0,0,0.7); */
+}
+
+.shadow-marker{
+	text-shadow:
+      3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+}

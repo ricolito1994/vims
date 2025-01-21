@@ -1,0 +1,22 @@
+.calendar{}
+
+.calendar table{
+	width:100%;
+}
+
+.calendar table tr th , .calendar table tr td {
+	border : 1px solid #ccc;
+	border-collapse : collapse;
+	padding:1%;
+}
+
+.calendar table tr td.today{
+	background:#007bff;
+	color:white;
+	font-weight:bold;
+}
+
+.calendar table tr td:hover{
+	background:aquamarine;
+	cursor:pointer;
+}

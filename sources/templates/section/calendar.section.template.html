@@ -1,0 +1,34 @@
+<div class='calendar' data-controller='calendar'>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th style='text-align:right;'>
+						<button data-event='calendar.click.prevMonth' class='btn btn-primary'><</button>
+					</th>
+					<th  colspan='5' style='text-align:center;'>
+						<div class='row'>
+							<div class='col-md-4'><select data-event='calendar.change.changeCalendar' id='calendar-months' data-valuectrl='selectMonth' class='form-control'></select> </div>
+							<div class='col-md-4'><input  data-event='calendar.blur.changeCalendar' type='text' id='calendar-years' data-valuectrl='selectedYear' class='form-control'> </div>
+							<div class='col-md-4'><button data-event='calendar.click.reset' class='btn btn-warning'><i class='icon-refresh'></i> Reset Today</button></div>
+						</div>
+					</th>
+					<th>
+						<button data-event='calendar.click.nextMonth' data-event='' class='btn btn-primary'>></button>
+					</th>
+				</tr>
+				<tr>
+					<th>SUN</th>
+					<th>MON</th>
+					<th>TUE</th>
+					<th>WED</th>
+					<th>THU</th>
+					<th>FRI</th>
+					<th>SAT</th>
+				</tr>
+			</thead>
+			<tbody>		
+			</tbody>
+		</table>
+	</div>
+</div>

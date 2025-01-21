@@ -1,0 +1,22 @@
+.topnav-fixed-top{
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+	z-index:1;
+}
+
+
+.topnav .navbar-nav.mr-auto li a {
+	display: block;
+	padding-top:2vh;
+	padding-bottom:2vh;
+	padding-left:3vh;
+	padding-right:3vh;
+	margin-left:1vh;
+}
+
+.topnav .navbar-nav.mr-auto li a:hover,.topnav .navbar-nav.mr-auto li a.active{
+	border-bottom : 2px solid white;
+	color:white;
+}

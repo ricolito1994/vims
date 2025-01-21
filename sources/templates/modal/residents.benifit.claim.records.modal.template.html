@@ -1,0 +1,69 @@
+<div class="modal modals-sm"  tabindex="2" id="claim-benifits-modal"  data-controller="ResidentBenifitClaimRecordsModalController">  
+	<div class="modal-dialog"  style="min-width: 80%;">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Resident Benifits Record Modal</h4>
+			<button type="button" class="close" data-event="ResidentBenifitClaimRecordsModalController.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body" style="width:100%;height:100%;">
+			
+			<div class="resident-claims-benifit-search-container" style="padding:1%;width:100%;height:10%;border:1px solid #ccc;">
+				<div style="float:left; width:20%;padding-right:1%;">
+					Benifit<br>
+					<select 
+						id="select-benifit" 
+						data-event="ResidentBenifitClaimRecordsModalController.change.changeBenifitType" 
+						data-valuectrl="claimObject.CLAIM_TYPE" 
+						class="form-control"	
+					>
+					</select>
+				</div>
+				<div style="float:left; width:20%; padding-right:1%;">
+					Amount<br>
+					<input type="text" class="form-control" data-valuectrl="claimObject.AMOUNT" />
+				</div>
+				<div style="float:left; width:20%; padding-right:1%;">
+					Date Claim From<br>
+					<input type="date" class="form-control" data-valuectrl="claimObject.DATE_CLAIM" />
+				</div>
+				<div style="float:left; width:20%; padding-right:1%;">
+					Date Claim To<br>
+					<input type="date" data-valuectrl="dateClaimTo" class="form-control" />
+				</div>
+				<div style="float:left; width:20%;">
+					<div style="float:left; width:50%; padding-right:1%;">
+						<br>
+						<button class="btn btn-warning" data-event="ResidentBenifitClaimRecordsModalController.click.searchClaim">
+							Search Benifit
+						</button>
+					</div>
+					<div style="float:left; width:50%;">
+						<br>
+						<button class="btn btn-success" data-event="ResidentBenifitClaimRecordsModalController.click.addClaim">
+							Claim Benifit
+						</button>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+
+			<div class="resident-claims-benifit-table-container" style="height:57vh;border:1px solid #ccc;">
+				<div id="dt-table" style="height:100%;"></div>
+			</div>
+			<div><br>
+				Total Amount Claimed : <span style="font-weight:bold;" data-valuectrl="totalAmountClaim"></span>
+			</div>
+			
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+			<button id="res_print_card_btn" data-event="ResidentBenifitClaimRecordsModalController.click.onClose" class="btn btn-danger">
+				<i class="icon-close" ></i> CLOSE
+			</button>	 
+		  </div>
+		</div>
+	</div>
+</div>

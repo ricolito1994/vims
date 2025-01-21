@@ -1,0 +1,29 @@
+<div id="resident-dashboard" data-controller="ResidentDashboardController" style="height:100%;">
+	<div style="height:100%;">
+		<div>
+			SCAN RECEIPIENTS
+		</div>
+		<div style="height:95%;">
+			<div style="width:50%;float:left;height:100%;" id="qrcode11"></div>
+			<div style="width:50%;float:right;padding:1%;height:100%;border:1px solid #ccc;height:100%;">
+				<div style="height:8%;width:100%;">
+					<div style="float:left;width:12%;padding-top:1%;"><b>ENTER ID</b></div> 
+					<div style="float:left;width:40%;padding-right:2%;">
+						<input type="text" placeholder='press enter to submit'  class="form-control" />
+					</div>
+					<div style="float:left;width:27%;padding-right:2%;">
+						<input type="date" data-event="ResidentDashboardController.change.changeValues" data-valuectrl="searchDate" class="form-control" />
+					</div>
+					<div style="float:left;width:8%">
+						<button class="btn btn-primary">Generate Report</button>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div class="scans-table-container" style="height: 92%; width:100%;background-color: #ccc;">
+					<div id="dt-table" style="height:100%;"></div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+<div style='
+       margin:0 auto;
+       display:table;
+       position: absolute;
+       left: 0;
+       right:0;
+       top: 50%;
+       -webkit-transform:translateY(-50%);
+       -moz-transform:translateY(-50%);
+       -ms-transform:translateY(-50%);
+       -o-transform:translateY(-50%);
+       transform:translateY(-50%);'
+	   
+	   class="modal modals-sm"
+	   data-backdrop="static" 
+	   data-keyboard="false" 
+	   tabindex='-1' 
+	   data-focus-on="input:first" 
+	   id="switchDesignation" 
+	   data-controller="SwitchDesignation">
+	   
+	<div class="modal-dialog">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Switch Account</h4>
+			<button type="button" class="close" data-event="SwitchDesignation.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body">
+			<div class="row">
+				<div class="col-md-12" style="border:1px solid #fff; padding :1%;width:100%;">
+					<button data-event="SwitchDesignation.click.PROPERTY_CUSTODIAN" style="width:100%" class="btn btn-primary">PROPERTY CUSTODIAN</button>
+					
+				</div>
+				<div class="col-md-12" style="border:1px solid #fff; padding :1%;width:100%;">
+					<button data-event="SwitchDesignation.click.WAREHOUSE_IN_CHARGE" style="width:100%" class="btn btn-primary">WAREHOUSE IN CHARGE</button>
+					
+				</div>
+			</div>
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+		  </div>
+		</div>
+	</div>
+</div>

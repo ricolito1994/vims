@@ -1,0 +1,41 @@
+<div class="modal fade modals-md search-modal-dialogbox" tabindex="-1" id="search-modal" data-controller="searchmodal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		  <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Search Modal</h4>
+			<button type="button" class="close" data-event="searchmodal.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body" id="searchModal">
+			<div class="dt-table-filter" >
+				<div class="col-md-12" style="border:1px solid #ccc; padding :1%;width:100%;">
+					<div class="row" id='modal-search-pane'>
+						<!--
+						<div class="row col-md-7" id="dttablefilter">
+							<div class="col-sm-12">
+								<input type="text" class="form-control" placeholder="Search Here..." data-valuectrl="fds.gds" data-event="searchmodal.keyup.changefilter" />
+							</div>
+						</div>
+						<div class="row col-md-5 action-buttons">
+							<button data-event="datatable.click.destroyTable" class="btn btn-warning">
+								<b><i class="icon-refresh"></i> Refresh Table</b>
+							</button>&nbsp;
+						</div>
+						-->
+					</div>
+				</div>
+			</div>
+			<div id="searchtablemodal" style="height:80%;">
+				<div id="dt-table"></div>
+			</div>
+			<!-- Modal footer -->
+		  <div class="modal-footer">
+			<button class="btn btn-danger" data-event="specialsubjectmodal.click.onClose">
+				<i class="icon-remove"></i> Close</button>
+		  </div>
+		  </div>
+		 
+		</div>
+	</div>
+</div>

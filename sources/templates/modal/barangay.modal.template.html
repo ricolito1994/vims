@@ -1,0 +1,57 @@
+<div class="modal modals-sm"  tabindex="2" id="barangay-modal"  data-controller="BarangayModalController">  
+	<div class="modal-dialog"  style="min-width: 50%;">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Barangay Modal</h4>
+			<button type="button" class="close" data-event="BarangayModalController.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body" style="width:100%;">
+			
+			<div style="width:100%;float:left;max-height:50vh;overflow-y:scroll;">
+				<div style="width:100%;">
+					<div style="width:29.67%;float:left;padding-left:.33%" >
+						BARANGAY ID <br>
+						<input type="text" class="form-control" data-valuectrl="prkvars.BARANGAY_ID" disabled />
+					</div>
+					<div style="width:69.67%;float:left;padding-left:.33%" >
+						BARANGAY NAME <br>
+						<input type="text" class="form-control" data-event="BarangayModalController.change.changebox" data-valuectrl="prkvars.BARANGAY_NAME" />
+					</div>
+					
+					
+					<div style="clear:both"></div>
+				</div>
+				
+				<div style="width:100%;">
+					
+					<div style="width:69.67%;float:left;padding-left:.33%" >
+						<BR>BARANGAY CAPTAIN 
+							&nbsp; <a style="color:red;" data-event="BarangayModalController.click.removeBarangayCaptain" href="javascript:void(0)"><i class="icon-remove"></i> Remove</a>
+							&nbsp; <a  data-event="BarangayModalController.click.searchBarangayCaptain" href="javascript:void(0)"><i class="icon-search"></i> Search</a>
+						<br> 
+						<input type="text" class="form-control" data-valuectrl="BARANGAY_CAPTAIN_NAME"  disabled />
+					</div>
+					
+					
+					<div style="clear:both"></div>
+				</div>
+				<div style="height:40%;width:100%;margin-top:2%;">
+					<H4>KAGAWAD</H4>
+					<ol id="brgy-kagawad-list">
+					</ol>
+				</div>
+				
+			</div>
+			<div style="clear:both"></div>
+			
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+			<button data-event="BarangayModalController.click.save" class="btn btn-primary"><i class="icon-arrow-down" ></i> SAVE</button>
+			<button data-event="BarangayModalController.click.votersBrgyList" class="btn btn-primary"><i class="icon-arrow-down" ></i> VOTERS' LIST</button>
+		  </div>
+		</div>
+	</div>
+</div>

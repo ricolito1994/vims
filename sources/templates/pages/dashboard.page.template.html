@@ -1,0 +1,70 @@
+<div data-controller="dashboard" class="container-page dashboard">
+	<div class="container-page-container">
+		<div class="heading">
+			Dashboard
+		</div>
+		<div class="content">
+			<div style='width:100%;height:100%;	'>
+				<div style='width:60%; float:left;height:100%;'>
+					<div style='height:10%;'>
+						<div style='width:5%;float:left;' >
+							<img id='dashboard-profpic' src="sources/images/prof.jpg" style='width:100%;'  alt="Logo" >
+						</div>
+						<div style='width:70%;float:left;'>
+							<div style='font-size:2vh;font-weight:bold;padding-left:1vh;' data-valuectrl='dashboard.fullname'></div>	
+							<div style='padding-left:1vh;' data-valuectrl='dashboard.position'></div>
+						</div>
+						<div style='width:25%;float:left;' >
+							<!--<img id='dashboard-profpic' src="sources/images/prof.jpg" style='width:100%;'  alt="Logo" >-->
+							<div>Today Is : <span data-valuectrl='dashboard.datetoday'></span></div>
+							<div> <span data-valuectrl='dashboard.timern'></span></div>
+						</div>
+						
+						<div style='clear:both;'></div>
+					</div>
+					
+					<div style='height:90%;'>
+						<div style='width:100%;height:100%;float:left;'>
+							<div class="card" style='height:100%'>
+							  <div class="card-header" style='font-size:1.5vh; heighy:10%;'>
+								ITEMS
+							  </div>
+							  <div class="card-body" id="dashboard-item-master-data-widget" style="height:100%;">
+								
+							  </div>
+							</div>
+						</div>
+						
+					</div>
+					<!--<div style="margin-top:17%;height:300px">
+						<div style='width:50%;float:left; height:100%;padding: 1%;'>
+							<div class="card" style='height:100%;'>
+							  <div class="card-header" style='font-size:1.5vh;'>
+								TOP Sales by Amount 
+							  </div>
+							  <div id="top-5-amount" class="card-body" style='overflow:auto;'>
+							  </div>
+							</div>
+						</div>
+						
+						<div style='width:50%;float:left;height:100%;padding: 1%;'>
+							<div class="card" style='height:100%;'>
+							   <div class="card-header" style='font-size:1.5vh;'>
+								TOP Sales  by Quantity 
+							  </div>
+							  <div id="top-5-quantity" class="card-body" style='overflow:auto;'>
+							  </div>
+							</div>
+						</div>
+					</div>-->
+				</div>
+				<div style='width:40%;float:left;padding-left:1%;height:100%;'>
+					<div id="dashboard-item-master-data-status-widget" style="height:100%;">
+					
+					</div>
+				</div>
+				<div style='clear:both;'></div>
+			</div>
+		</div>
+	</div>
+</div>

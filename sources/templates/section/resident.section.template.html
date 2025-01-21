@@ -1,0 +1,56 @@
+<div id="resident-section" data-controller="ResidentSectionController" style="height:100%;">
+	<div style="width:100%;height:100%;">
+		<div style="width:100%;height:5%;">
+			<B>RESIDENTS SETUP</B>
+		</div>
+		<div style="width:100%;height:95%;">
+			<div style="height:10%;width:100%">
+				<div style="width:23%;float:left">
+					Fullname<br>
+					<input type="text" class="form-control" data-valuectrl="fullname" data-event="ResidentSectionController.change.changeFilter" />
+				</div>
+				<div style="width:20%;float:left;padding-left:0.5%;">
+					Address<br>
+					<input type="text" class="form-control" data-valuectrl="address" data-event="ResidentSectionController.change.changeFilter" />
+				</div>
+				<div style="width:15%;float:left;padding-left:0.5%;">
+					Family Leader <a href="javascript:void(0);" data-event="ResidentSectionController.click.removeFml" style="color:red" ><i class="icon-remove"></i></a><br>
+					<input type="text" class="form-control" data-valuectrl="familyLeader.fname" data-event="ResidentSectionController.click.chooseFamilyLeader" />
+				</div>
+				<div style="width:12%;float:left;padding-left:0.5%;">
+					Barangay <a href="javascript:void(0);" style="color:red" data-event="ResidentSectionController.click.removeBrgy" ><i class="icon-remove"></i></a> <br>
+					<input type="text" class="form-control" data-valuectrl="barangay.name" data-event="ResidentSectionController.click.chooseBarangay" />
+				</div>
+				<div style="width:12%;float:left;padding-left:0.5%;">
+					Zone <a href="javascript:void(0);" style="color:red" data-event="ResidentSectionController.click.removePrk" ><i class="icon-remove"></i></a> <br>
+					<input type="text" class="form-control" data-valuectrl="purok.name" data-event="ResidentSectionController.click.choosePurok" />
+				</div>
+				<div style="width:8%;float:left;padding-left:0.5%;">
+					Leader <br>
+					<select  class="form-control" data-valuectrl="isFamilyLeader" data-event="ResidentSectionController.change.changeFilter">
+						<option value=''>All</option>
+						<option value='1'>Yes</option>
+						<option value='0'>No</option>
+					</select>
+				</div>
+				<div style="width:10%;float:left;padding-left:0.5%;">
+					<div style="width:70%;float:left">
+						Actions<br>
+						<button class="btn btn-primary"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<b><i class="icon-caret-down"></i> Actions</b>
+						</button>
+						<div class="dropdown-menu dropdown-menu-left" id="dt-dp-actions">
+							<a data-event="ResidentSectionController.click.openResidentModal" href="javascript:void(0);" class="dropdown-item"><b><i class="icon-plus"></i> New Resident</b></a>
+							<a data-event="ResidentSectionController.click.newTransaction"  href="javascript:void(0);" class="dropdown-item"><b><i class="icon-refresh"></i> Refresh Table</b></a>
+							<a data-event="ResidentSectionController.click.votersListReport"  href="javascript:void(0);" class="dropdown-item"><b><i class="icon-refresh"></i> Voters List</b></a>
+						</div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+			<div class="resident-table-container" style="height:90%;border:1px solid #ccc;">
+				<div id="dt-table" style="height:100%;"></div>
+			</div>
+		</div>
+	</div>
+</div>

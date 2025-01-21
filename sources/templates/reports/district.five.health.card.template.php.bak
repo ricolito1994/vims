@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<?php
+	$data = json_decode ($_POST['data'],false);
+	?>
+	<title></title>
+	<script type="text/javascript" src="/vims/sources/imports/scripts/qrcodejs/qrcode.min.js" ></script>
+	<style>
+		div#qrcode_ img{
+			width:100%;
+		}
+		*{
+			font-family:verdana;
+		}
+	</style>
+</head>
+<?php
+//W:3.375IN
+//H:2.125IN
+?>
+<body>
+	<div style="height:2.125in;width:3.375in;border:1px solid black;padding:0.5%;">
+		<div style="width:70%;float:left;height:100%;">
+			<div style="height:10%;"></div>
+			<div style="height:50%">
+				<div><span style="font-size:7px;" >NAME</span><BR>
+				<b style="font-size:8px;"><?PHP ECHO $data->FIRSTNAME.' '.$data->MIDDLENAME.' '.$data->LASTNAME; ?></b>
+				</div>
+				
+				<div>
+					<span style="font-size:7px;">ADDRESS</span></BR>
+					<b style="font-size:8px;"><?PHP ECHO $data->ADDRESS; ?><BR></b>
+				</div>
+				
+				<div>
+					<span style="font-size:7px;">COMORDIBITIES</span></BR>
+					<b style="font-size:8px;">DIABETES, HYPERTENSION<BR></b>
+				</div>
+				
+				<div>
+					<span style="font-size:7px;">COVID 19 VACCINATION:</span></BR>
+					<b style="font-size:8px;">YES<BR></b>
+				</div>
+			</div>
+		</div>
+		<div style="width:30%;float:right;">
+			<div id="qrcode_" style="width:100%;"></div>
+		</div>
+		
+		<div style="clear:both"></div>
+	</div>
+</body>
+	<script >
+		var qrcode = new QRCode("qrcode_");
+		qrcode.makeCode(<?php echo $data->RESIDENT_ID; ?>);
+	</script>
+</html>

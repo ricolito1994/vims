@@ -1,0 +1,45 @@
+#dt-table table{
+	height:105%;
+    table-layout: fixed;
+    border-collapse: collapse;
+	border-bottom : 1px solid #ccc;
+	font-size:2vh;
+}
+
+#dt-table tbody{
+	display:block;
+	width: 100%;
+	overflow: auto;
+	height: 100%;
+	max-height:70vh;
+}
+
+#dt-table thead tr {
+   display: block;
+}
+
+#dt-table thead {
+	background: #123;
+	color:#fff;
+	height : 5%;
+}
+
+#dt-table th, #dt-table td {
+	padding:1%;
+	text-align: left;
+	width:100vh;
+}
+
+.item-masterdata-table #dt-table th:nth-child(2),#dt-table td:nth-child(2){
+}
+
+#searchtablemodal #dt-table th:first-child,#dt-table td:first-child{
+}
+
+#dt-table, #dt-table-container{
+	height:100%;
+}
+
+.dt-table-container{
+	height:85%;
+}

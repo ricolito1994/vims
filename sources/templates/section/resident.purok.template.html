@@ -1,0 +1,44 @@
+<div id="resident-purok" data-controller="ResidentPurokController" style="height:100%;">
+	<div style="width:100%;height:100%;">
+		<div style="width:100%;height:5%;">
+			<B>ZONE SETUP</B>
+		</div>
+		<div style="width:100%;height:95%;">
+			<div style="height:10%;width:100%">
+				<div style="width:20%;float:left">
+					ZONE NAME<br>
+					<input data-valuectrl="PRK_NAME" data-event="ResidentPurokController.change.changeFilter" type="text" class="form-control" />
+				</div>
+				<div style="width:20%;float:left;padding-left:0.5%;">
+					ZONE LEADER&nbsp; <a href="javascript:void(0);" data-event="ResidentPurokController.click.removePurokLeader" style="color:red;font-weight:bold;"><span class="icon-remove"></span> Remove</a> <br>
+					<input data-valuectrl="PRK_LEADER_NAME" data-event="ResidentPurokController.click.choosePurokLeader" type="text" class="form-control" />
+				</div>
+				<div style="width:20%;float:left;padding-left:0.5%;">
+					KAGAWAD&nbsp; <a href="javascript:void(0);" data-event="ResidentPurokController.click.removeKagawad" style="color:red;font-weight:bold;"><span class="icon-remove"></span> Remove</a> <br>
+					<input data-valuectrl="KAGAWAD_NAME" data-event="ResidentPurokController.click.chooseKagawad" type="text" class="form-control" />
+				</div>
+				<div style="width:20%;float:left;padding-left:0.5%;">
+					BARANGAY&nbsp; <a href="javascript:void(0);" data-event="ResidentPurokController.click.removeBarangay" style="color:red;font-weight:bold;"><span class="icon-remove"></span> Remove</a> <br>
+					<input data-valuectrl="BARANGAY_NAME" data-event="ResidentPurokController.click.chooseBarangay" type="text" class="form-control" />
+				</div>
+				<div style="width:10%;float:left;padding-left:0.5%;">
+					<div style="width:70%;float:left">
+						Actions<br>
+						<button class="btn btn-primary"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<b><i class="icon-caret-down"></i> Actions</b>
+						</button>
+						<div class="dropdown-menu dropdown-menu-left" id="dt-dp-actions">
+							<a data-event="ResidentPurokController.click.openPurok"  href="javascript:void(0);" class="dropdown-item"><b><i class="icon-plus"></i> New Zone</b></a>
+							<a data-event="ResidentPurokController.click.newTransaction" data-params='{"TYPE":""}' href="javascript:void(0);" class="dropdown-item"><b><i class="icon-refresh"></i> Refresh Table</b></a>
+							<a data-event="ResidentPurokController.click.barangaySetup" data-params='{"TYPE":""}' href="javascript:void(0);" class="dropdown-item"><b><i class="icon-refresh"></i> Barangay Setup</b></a>	
+						</div>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+			<div class="resident-table-container" style="height:90%;border:1px solid #ccc;">
+				<div id="dt-table" style="height:100%;"></div>
+			</div>
+		</div>
+	</div>
+</div>

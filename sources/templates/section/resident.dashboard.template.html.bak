@@ -1,0 +1,21 @@
+<div id="resident-dashboard" data-controller="ResidentDashboardController" class="">
+	<div style="height:100%;">
+		<div>
+			DASHBOARD
+		</div>
+		<div style="height:95%;">
+			<div style="width:45%;float:left;" id="qrcode"></div>
+			<div style="width:50%;float:right;padding:1%;height:100%;border:1px solid black;">
+				<div>
+					<div style="font-size:15px;">FULLNAME</div>
+					<div style="font-size:20px;" data-valuectrl="fullname" ></div>
+				</div>
+				<div>
+					<div style="font-size:15px;">ADDRESS </div>
+					<div data-valuectrl="address" ></div>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+<div class="modal modals-sm"  data-focus-on="input:first" id="new-location-modal"  data-controller="NewLocationModal">  
+	<div class="modal-dialog"  style="min-width: 62%;">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Location Modal</h4>
+			<button type="button" class="close" data-event="NewLocationModal.click.closeNewLocation">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body row">
+			<div class="col-md-6" >
+				Type <br>
+				<select class="form-control" data-event="NewLocation.change.changeValues" data-valuectrl="LOC_TYPE">
+					<option value="HH">🏠 HOUSEHOLD</option>
+					<option value="P">🅿 PUROK</option>
+					<!--<option disabled value="B">🏬 BUSINESS</option>
+					<option disabled value="H">🏥 HOSPITAL</option> 
+					<option disabled value="S">🏫 SCHOOL</option>-->
+				</select>
+			</div>
+			<div class="col-md-6">
+				Name <br>
+				<div class="icon-addon addon-md">
+					<input type="text" placeholder="LOCATION" class="form-control arial-font" id="locname" data-valuectrl="LOC_NAME">
+					<label data-event="NewLocationModal.click.searchNames" style="cursor:pointer" for="locname" class="glyphicon icon-search" rel="tooltip" title="location"></label>
+				</div>
+			</div>
+			<div class="col-md-8" >
+				<BR>FULL ADDRESS <br>
+				<input type="text" class="form-control" data-valuectrl="FULL_ADDRESS" disabled />
+			</div>
+			<!--<div class="col-md-6" >
+				<BR>LAT <br>
+				<input type="text" class="form-control" data-valuectrl="LAT" disabled />
+			</div>
+			<div class="col-md-6" >
+				<BR>LNG <br>
+				<input type="text" class="form-control" data-valuectrl="LNG" disabled />
+			</div>-->
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+			<button data-event="NewLocationModal.click.save" class="btn btn-primary"><i class="icon-arrow-down" ></i> SAVE</button>
+			<button data-event="NewLocationModal.click.delete" class="btn btn-danger"><i class="icon-remove"></i> REMOVE</button>
+			<button data-event="NewLocationModal.click.open" class="btn btn-info"><i class="icon-search"></i> INFO</button>
+		  </div>
+		</div>
+	</div>
+</div>

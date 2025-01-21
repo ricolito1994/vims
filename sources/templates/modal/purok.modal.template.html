@@ -1,0 +1,67 @@
+<div class="modal modals-sm"  tabindex="2" id="purok-modal"  data-controller="PurokModalController">  
+	<div class="modal-dialog"  style="min-width: 50%;">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Resident Modal</h4>
+			<button type="button" class="close" data-event="PurokModalController.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body" style="width:100%;">
+			
+			<div style="width:100%;float:left;max-height:50vh;overflow-y:scroll;">
+				<div style="width:100%;">
+					<div style="width:49.5%;float:left;padding-left:.33%" >
+						ZONE NAME <br>
+						<input type="text" class="form-control" data-event="PurokModalController.change.changebox" data-valuectrl="prkvars.PRK_NAME" />
+					</div>
+					<div style="width:49.5%;float:left;padding-left:.33%" >
+						KAGAWAD
+						&nbsp; <a style="color:red;" data-event="PurokModalController.click.removeKagawad" href="javascript:void(0)"><i class="icon-remove"></i> Remove</a>
+							&nbsp; <a  data-event="PurokModalController.click.searchKagawad" href="javascript:void(0)"><i class="icon-search"></i> Search</a>
+						<br> 
+						<input type="text" class="form-control" data-valuectrl="BARANGAY_KAGAWAD_NAME"  disabled />
+					</div>
+					
+					<div style="clear:both"></div>
+				</div>
+				
+				<div style="width:100%;">
+					
+					<div style="width:50%;float:left;padding-left:.33%" >
+						<BR>ZONE LEADER 
+							&nbsp; <a style="color:red;" data-event="PurokModalController.click.removePrkLeader" href="javascript:void(0)"><i class="icon-remove"></i> Remove</a>
+							&nbsp; <a  data-event="PurokModalController.click.searchPrkLeader" href="javascript:void(0)"><i class="icon-search"></i> Search</a>
+						<br> 
+						<input type="text" class="form-control" data-valuectrl="PRK_LEADER_NAME"  disabled />
+					</div>
+
+					<div style="width:50%;float:left;padding-left:.33%" >
+						<BR>BARANGAY
+							&nbsp; <a style="color:red;" data-event="PurokModalController.click.removeBarangay" href="javascript:void(0)"><i class="icon-remove"></i> Remove</a>
+							&nbsp; <a  data-event="PurokModalController.click.searchBarangay" href="javascript:void(0)"><i class="icon-search"></i> Search</a>
+						<br> 
+						<input type="text" class="form-control" data-valuectrl="BARANGAY_NAME"  disabled />
+					</div>
+					
+					<div style="clear:both"></div>
+				</div>
+				
+				<div style="height:40%;width:100%;margin-top:4%;">
+					<H4>HOUSEHOLD LEADERS</H4>
+					<ol id="prk-hh-list">
+					</ol>
+				</div>
+				
+			</div>
+			<div style="clear:both"></div>
+			
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+			<button data-event="PurokModalController.click.save" class="btn btn-primary"><i class="icon-arrow-down" ></i> SAVE</button>
+			<button data-event="PurokModalController.click.votersPrkList" class="btn btn-primary"><i class="icon-arrow-down" ></i> VOTER'S LIST</button>
+		  </div>
+		</div>
+	</div>
+</div>

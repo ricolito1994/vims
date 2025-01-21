@@ -1,0 +1,18 @@
+<div id="GoogleMapsWidgetAPI" data-controller="GoogleMapsWidgetAPIController" style="width:100%;height:100%;border:1px solid red;">
+	<div style="width:100%;height:100%;">
+		<input data-event="GoogleMapsWidgetAPIController.change.changeFilter" data-valuectrl="SearchPlacesBar" style="width:30%;position:absolute;margin-top:1%;" type="text" id="pac-input" class="form-control" placeholder="Search Places"/>
+		<div style="position:absolute;z-index:999;right:1%;top:55%;" >
+			<div>
+				<a data-event="GoogleMapsWidgetAPIController.click.searchLocation" title="Search Family" class="btn btn-primary" href="javascript:void(0);" >
+				<span class="icon-search"></span></a>
+			</div>
+			<div style="margin-top:14%;">
+				<a data-event="GoogleMapsWidgetAPIController.click.returnBaseLocation" title="Go Back to Default Place" class="btn btn-primary" href="javascript:void(0);">
+					<span class="icon-home"></span>
+				</a>
+			</div>
+		</div>
+		<div style="width:100%;height:100%;"  id="maps-container">			
+		</div>
+	</div>
+</div>

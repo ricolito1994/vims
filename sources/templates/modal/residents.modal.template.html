@@ -1,0 +1,280 @@
+<div class="modal modals-sm"  tabindex="3" id="residents-modal"  data-controller="ResidentsModalController">  
+	<div class="modal-dialog"  style="min-width: 80%;">
+		<div class="modal-content">
+	      <!-- Modal Header -->
+		  <div class="modal-header basic">
+			<h4 class="modal-title">Resident Modal</h4>
+			<button type="button" class="close" data-event="ResidentsModalController.click.onClose">&times;</button>
+		  </div>
+		  <!-- Modal body -->
+		  <div class="modal-body" style="width:100%;">
+			<div style="width:20%;float:left;">
+				<input type='image' id='itemimage' data-event='ResidentsModalController.click.chooselogo' data-valuectrl='itemtemppic'  style='width:90%;height:20%;' />
+				<input id='itemimage_pic' data-valuectrl='residentVars.ITEM_IMAGE' data-event='ResidentsModalController.change.changeProfPic' accept="image/png, image/gif, image/jpeg" type='file' style='display:none;' class='form-control' placeholder='choose your profile picture' />	
+			</div>
+			<div style="width:80%;float:left;max-height:50vh;overflow-y:scroll;">
+				<div style="width:100%;">
+					<div style="width:33%;float:left;padding-left:.33%" >
+						LASTNAME <br>
+						<input type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" data-valuectrl="residentVars.LASTNAME" />
+					</div>
+					<div style="width:33%;float:left;padding-left:.33%" >
+						FIRSTNAME <br>
+						<input type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" data-valuectrl="residentVars.FIRSTNAME" />
+					</div>
+					<div style="width:33%;float:left;padding-left:.33%" >
+						MIDDLENAME <br>
+						<input type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" data-valuectrl="residentVars.MIDDLENAME" />
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div id="address_container" style="width:100%;margin-top:2%;">
+					<div style="width:50%;float:left;padding-left:.33%" >
+						ADDRESS <br>
+						<input type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" id="ResidentModalAddress" data-event="ResidentsModalController.change.changeValues" data-valuectrl="residentVars.ADDRESS" />
+					</div>
+					<div style="width:25%;float:left;padding-left:.33%" >
+						BRGY <br>
+						<input type="text" class="form-control" data-valuectrl="BARANGAY_NAME" data-event="ResidentsModalController.click.searchBarangay"/>
+							
+					</div>
+					<div style="width:25%;float:left;padding-left:.33%" >
+						ZONE <br>
+						<input type="text" class="form-control" data-valuectrl="PUROK_NAME" data-event="ResidentsModalController.click.searchPurok"/>
+							
+					</div>
+					<div style="clear:both"></div>
+				</div>
+
+				<div id="contacts_container" style="width:100%;margin-top:2%;">
+					<div style="width:30%;float:left;padding-left:.33%" >
+						EMERGENCY CONTACT NAME <br>
+						<input type="text" class="form-control" data-event="ResidentsModalController.change.changeValues" data-valuectrl="residentVars.EMERGENCY.NAME" />
+					</div>
+					
+					<div style="width:40%;float:left;padding-left:.33%" >
+						ADDRESS <br>
+						<input type="text" class="form-control" data-event="ResidentsModalController.change.changeValues" data-valuectrl="residentVars.EMERGENCY.ADDRESS" />
+					</div>
+					
+					<div style="width:30%;float:left;padding-left:.33%" >
+						PHONE <br>
+						<input type="text" class="form-control" data-event="ResidentsModalController.change.changeValues" data-valuectrl="residentVars.EMERGENCY.CONTACT_NUMBER" />
+					</div>
+					
+					<div style="clear:both"></div>
+				</div>
+				<div style="width:100%;margin-top:2%;">
+					<div style="width:45%;float:left;padding-left:.33%" >
+						BIRTHDAY <br>
+						<input type="date" class="form-control" data-event="ResidentsModalController.change.calcAge" data-valuectrl="residentVars.BIRTHDAY" />
+					</div>
+					<div style="width:15%;float:left;padding-left:.33%" >
+						AGE <br>
+						<input type="text" class="form-control" data-valuectrl="currentAge" />
+					</div>
+
+					<div id="family_leader_container" style="width:35%;float:left;padding-left:.33%" >
+						IS FAMILY LEADER <br>
+						<select  class="form-control" data-valuectrl="residentVars.IS_FAMILY_LEADER"  data-event="ResidentsModalController.change.changefamilyleaderstat">
+							<option value='1'>YES</option>
+							<option value='0'>NO</option>
+						</select>
+					</div>
+					<div id="family_leader_container" style="width:35%;float:left;padding-left:.33%" >
+						<br>IS BARANGAY KAGAWAD <br>
+						<select  class="form-control" data-valuectrl="residentVars.IS_BARANGAY_KAGAWAD"  data-event="ResidentsModalController.change.changeBarangayKagawadStat">
+							<option value='1'>YES</option>
+							<option value='0'>NO</option>
+						</select>
+					</div>
+					<div style="width:33%;float:left;padding-left:.33%" >
+						<br> PRECINCT NO. <br>
+						<input type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" data-valuectrl="residentVars.PRECINCT_NUMBER" />
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div style="width:100%;margin-top:2%;">
+					
+				</div>
+
+				<div id="fam-leader-container" style="width:70%;margin-top:2%;">
+					<div style="width:50%;margin-top:2%;float:left;">
+					FAMILY HEAD<BR>
+					<input class="form-control" type="text" data-valuectrl="hh_leader" disabled />
+						<a href='javascript:void(0)'  data-params='{"onevt":":onSelectBrgyHead","search":"resident_leader"}' data-event="ResidentsModalController.click.searchResident"><i class="icon-search"></i> Search</a>&nbsp;
+						<a style="color:red;"   data-event="ResidentsModalController.click.removeBrgyHead" href='javascript:void(0)'><i class="icon-remove"></i> Remove</a>
+					</div>
+					<div style="width:50%;margin-top:2%;float:left;">
+						RELATIONSHIP<BR>
+						<select 
+							class="form-control"
+							data-event=""
+							data-valuectrl="residentVars.RELATIONSHIP_TO_HH_LEADER"
+						>
+							<option>Not Specified</option>
+							<option>Wife</option>
+							<option>Husband</option>
+							<option>Daughter</option>
+							<option>Son</option>
+							<option>Mother</option>
+							<option>Father</option>
+							<option>Brother</option>
+							<option>Sister</option>
+							<option>Cousin</option>
+							<option>Uncle</option>
+							<option>Aunt</option>
+							<option>Niece</option>
+							<option>Nephew</option>
+							<option>Grandfather</option>
+							<option>Grandmother</option>
+							<option>Step Daughter</option>
+							<option>Step Son</option>
+							<option>Step Mother</option>
+							<option>Step Father</option>
+							<option>Step Brother</option>
+							<option>Step Sister</option>
+							<option>Step Cousin</option>
+							<option>Step Uncle</option>
+							<option>Step Aunt</option>
+							<option>Step Niece</option>
+							<option>Step Nephew</option>
+							<option>Step Grandfather</option>
+							<option>Step Grandmother</option>
+							<option>Others</option>
+						</select>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+				<div id="fam-members-tbl-container" style="width:100%;margin-top:2%;">
+					<div>
+						<div style="width:40%;float:left;">
+							FAMILY MEMBERS  
+							<a href="javascript:void(0);" data-event="ResidentsModalController.click.searchResident">+ADD</a>
+						</div>
+						<div style="width:60%;float:right;">
+							HOUSEHOLD NUMBER <input disabled class="form-control" style="width:40%;" type="text" data-valuectrl="residentVars.HH_CODE"/>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<div style="margin-top:10px;">
+						<table class="table" id="members-hh-table">
+							<thead>
+								<tr>
+									<td>Fullname</td>
+									<td>Birthday</td>
+									<td>Age</td>
+									<td>Relationship</td>
+									<td>Action</td>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div id="others_1_container" style="width:100%;margin-top:5%;">
+					<!--<div style="width:15%;float:left;padding-right:2%" >
+						BLOOD TYPE <br>
+						<select  class="form-control" data-valuectrl="residentVars.BLOOD_TYPE" >
+							<option>A+</option>
+							<option>A-</option>
+							<option>B+</option>
+							<option>B-</option>
+							<option>O+</option>
+							<option>O-</option>
+							<option>AB+</option>
+							<option>AB-</option>
+						</select>
+					</div>-->
+					<!--<div style="width:83%;float:right;">
+						<div style="width:30%;float:left;">
+							COMORDIBITY  <a href="javascript:void(0);" data-event="ResidentsModalController.click.addComordibity">+ADD</a><BR>
+							<div>
+								<table class="table" id="comordibity-table">
+									<thead>
+										<tr>
+											<td>Comordibity</td>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div style="width:67%;float:right">
+							VACCINATION  <a href="javascript:void(0);" data-event="ResidentsModalController.click.addVaccine">+ADD</a><BR>
+							<div>
+								<table class="table" id="vaccine-table">
+									<thead>
+										<tr>
+											<td>Comordibity</td>
+										</tr>
+									</thead>
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div style="clear:both"></div>
+					</div>
+					<div style="clear:both"></div>
+				</div>-->
+				<!--<div style="width:100%;margin-top:2%;">
+					<div style="width:25%;float:left;" >
+						IS FAMILY LEADER <br>
+						<select  class="form-control" data-valuectrl="residentVars.IS_FAMILY_LEADER"  data-event="ResidentsModalController.change.changefamilyleaderstat">
+							<option value='1'>YES</option>
+							<option value='0'>NO</option>
+						</select>
+					</div>
+					<div style="width:25%;float:left;padding-left:.33%" >
+						HAS SCHOLARSHIP <br>
+						<select type="text" data-event='ResidentsModalController.change.changeValues' class="form-control" data-valuectrl="residentVars.HAS_SCHOLARSHIP" >
+							<option value='1'>YES</option>
+							<option value='0'>NO</option>
+						</select>
+					</div>
+					<div style="width:25%;float:left;padding-left:.33%" >
+						IS PATIENT <br>
+						<select type="text" class="form-control"  data-event='ResidentsModalController.change.changeValues' data-valuectrl="" >
+							<option value='0'>NO</option>
+							<option value='1'>YES</option>
+						</select>
+					</div>
+				</div>-->
+				<div id="res_qrcode_container" style="width:33%;margin-top:-4%;padding-bottom:1%;"  >
+					<b>QRCODE</b><BR>
+					<div  id="qrcode" style="width:110%;">
+				
+					</div>
+					<div >
+					<!--<B><span data-valuectrl="residentVars.RESIDENT_ID"></span></B>-->
+					</div>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			
+		  </div>
+		  <!-- Modal footer -->
+		  <div class="modal-footer">
+			<button id="res_save_btn" data-event="ResidentsModalController.click.save" class="btn btn-primary">
+				<i class="icon-arrow-down" ></i> SAVE
+			</button>
+			<!--<button id="res_claim_records" data-event="ResidentsModalController.click.claimBenifitRecords" class="btn btn-primary">
+				<i class="icon-arrow-down" ></i> CLAIM RECORDS
+			</button>-->
+			<button id="res_print_card_btn" data-event="ResidentsModalController.click.printHealthCard" class="btn btn-primary">
+				<i class="icon-print" ></i> PRINT BARANGAY CARD
+			</button>	 
+			<button id="res_print_card_btn" data-event="ResidentsModalController.click.printVoters" class="btn btn-primary">
+				<i class="icon-print" ></i>  VOTERS LIST
+			</button> 
+		  </div>
+		</div>
+	</div>
+</div>

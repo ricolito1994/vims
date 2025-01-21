@@ -1,0 +1,42 @@
+.login-main-container {
+	background:#2196f3;
+}
+
+.login-container{
+	width:40%;
+	position:absolute;
+	background:#fff;
+	left:30%;
+	border : 1px solid #ccc;
+	top:10%;
+	padding:2%;
+
+}
+
+.login-form{
+	padding-top:3vh;
+}
+
+.login-form div{
+	margin-bottom:1vh;
+}
+
+.login-form div input{
+	font-size:3vh;
+	height:7vh;
+}
+
+.copyright-bottom{
+	font-size:1.5vh;
+}
+
+
+.barcode-main-panel-container{
+	padding:1%;
+	width:90%;
+	position:absolute;
+	top:5%;
+	height:90%;
+	left:5%;
+	background:#fff;
+}

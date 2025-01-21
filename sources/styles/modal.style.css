@@ -1,0 +1,41 @@
+.modals{
+	
+}
+
+.modal-content{
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.modal-header.basic{
+	background:#2196f3;
+	color:white;
+}
+
+.modals-lg .modal-dialog{
+	max-width:99%;
+}
+
+.modals-lg .modal-dialog .modal-content{
+	height:93vh;
+	max-height: 93vh;
+}
+
+.modals-md .modal-dialog{
+	max-width:70%;
+
+}
+
+.modals-md .modal-dialog .modal-content{
+	height:88vh;
+	max-height: 88vh;
+}
+
+
+.modal-forms div.form-items{
+	font-size:2vh;
+}
+
+.btnfrms:hover{
+	cursor:pointer;
+}

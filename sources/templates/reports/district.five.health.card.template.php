@@ -32,7 +32,8 @@
 			width:100%;
 		}
 		*{
-			font-family:verdana;
+			font-family	   : verdana;
+			text-transform : uppercase;
 		}
 	</style>
 </head>
@@ -57,47 +58,76 @@
 			</div>
 			<div style="height:15%;" align="center">
 				<div>
-					<B style="font-size:11px;">HEALTH CARD</B>
+					<B style="font-size:11px;">VOTER'S CARD</B>
 				</div>
 				<div style="margin-top:-10px;">
 					<span style="font-size:10px;"><?php echo generateCardNumber($data->ID); ?></span>
 				</div>
 			</div>
 			<div style="height:50%; ">
-				<div style='font-size:8px;'>
-					NAME:<br>
-					<STRONG><?PHP ECHO $data->FIRSTNAME.' '.$data->MIDDLENAME.' '.$data->LASTNAME; ?></STRONG>
-				</div>
-				<div style='margin-top:5px;font-size:8px;'>
-					ADDRESS:<br>
-					<STRONG><?PHP ECHO $data->ADDRESS; ?></STRONG>
-				</div>
-				<div style='margin-top:5px;font-size:8px;'>
-					COMORDIBITY:<br>
-					<?php 
-						$comordibity = count($data->COMORDIBITY) > 0 ? implode( ",", $data->COMORDIBITY ): 'NONE';
+				<div style='margin-top:5px;font-size:8px;width:100%;'>
+					<div style='width:100%;float:left;'>
+						NAME:<br>
+						<?php
+						/*$vaccineDose = count ($data->VACCINATION);
 						
-					?>
-					<STRONG><?php echo strtoupper($comordibity); ?></STRONG>
+						$vaccineDose = $vaccineDose > 0 ? "YES, $vaccineDose DOSE" : "NO";
+						*/
+						?>
+						<!--<STRONG><?php //echo $vaccineDose; ?></STRONG>-->
+						<STRONG><?php ECHO $data->FULLNAME; ?></STRONG>
+					</div>
+					
+					<div style="clear:both"></div>
+				</div>
+				<div style='margin-top:5px;font-size:8px;width:100%;'>
+					<div style='width:100%;float:left;'>
+						ADDRESS:<br>
+						<?php
+						/*$vaccineDose = count ($data->VACCINATION);
+						
+						$vaccineDose = $vaccineDose > 0 ? "YES, $vaccineDose DOSE" : "NO";
+						*/
+						?>
+						<!--<STRONG><?php //echo $vaccineDose; ?></STRONG>-->
+						<STRONG><?php ECHO $data->ADDRESS; ?></STRONG>
+					</div>
+					
+					<div style="clear:both"></div>
 				</div>
 				<div style='margin-top:5px;font-size:8px;width:100%;'>
 					<div style='width:50%;float:left;'>
-						COVID VACCINATION:<br>
+						PRECINCT NUMBER:<br>
 						<?php
-						$vaccineDose = count ($data->VACCINATION);
+						/*$vaccineDose = count ($data->VACCINATION);
 						
 						$vaccineDose = $vaccineDose > 0 ? "YES, $vaccineDose DOSE" : "NO";
-						
+						*/
 						?>
-						<STRONG><?php echo $vaccineDose; ?></STRONG>
+						<!--<STRONG><?php //echo $vaccineDose; ?></STRONG>-->
+						<STRONG><?php ECHO $data->PRECINCT_NUMBER; ?></STRONG>
 					</div>
 					<div style='width:50%;float:right;'>
-						BLOOD TYPE:<br>
-						<STRONG><?PHP echo $data->BLOOD_TYPE; ?></STRONG>
+						CLUSTERED PRECINCT:<br>
+						<STRONG><?PHP echo $data->CLUSTERED_PRECINCT; ?></STRONG>
 					</div>
 					<div style="clear:both"></div>
 				</div>
-				
+				<div style='margin-top:5px;font-size:8px;width:100%;'>
+					<div style='width:100%;float:left;'>
+						POLLING PLACE:<br>
+						<?php
+						/*$vaccineDose = count ($data->VACCINATION);
+						
+						$vaccineDose = $vaccineDose > 0 ? "YES, $vaccineDose DOSE" : "NO";
+						*/
+						?>
+						<!--<STRONG><?php //echo $vaccineDose; ?></STRONG>-->
+						<STRONG><?php ECHO $data->POLLING_PLACE; ?></STRONG>
+					</div>
+					
+					<div style="clear:both"></div>
+				</div>
 			</div>
 			<!--<div style="height:50%">
 				<div><span style="font-size:7px;" >NAME</span><BR>

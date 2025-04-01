@@ -43,6 +43,9 @@ export class ResidentsModalController extends Modal {
 			IS_BARANGAY_KAGAWAD : 0,
 			PRECINCT_NUMBER : '',
 			RELATIONSHIP_TO_HH_LEADER : 'Not Specified',
+			SEQUENCE_NUMBER: '',
+			CLUSTERED_PRECINCT: '',
+			POLLING_PLACE: '',
 		}
 
 		this.BARANGAY_NAME = this.modalData.args['BARANGAY_NAME'] ? this.modalData.args['BARANGAY_NAME'] : "" ;
@@ -711,7 +714,7 @@ export class ResidentsModalController extends Modal {
 
 		}
 		
-		//console.log(saveparams)
+		console.log(saveparams)
 		
 		let sql1 = !this.isUpdate ? `INSERT INTO barangay_res_setup ${saveparams.initial} VALUES ${saveparams.seconds}` :
 									`UPDATE barangay_res_setup ${saveparams.initial} where RESIDENT_ID = "${this.residentVars.RESIDENT_ID}"`;
